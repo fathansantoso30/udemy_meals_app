@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:udemy_meals_app/categories_screen.dart';
 
 void main() {
@@ -13,6 +14,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: GoogleFonts.raleway().fontFamily,
+        textTheme: GoogleFonts.ralewayTextTheme().copyWith(
+            titleMedium: GoogleFonts.raleway(
+                textStyle: const TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ))),
       ),
       home: const CategoriesScreen(),
     );
